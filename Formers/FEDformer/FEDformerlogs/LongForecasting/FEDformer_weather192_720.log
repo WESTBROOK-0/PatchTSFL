@@ -1,0 +1,48 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=21, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=21, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=10, output_attention=False, patience=3, pred_len=720, root_path='../dataset', seq_len=192, target='OT', task_id='weather', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[2, 3, 4, 6, 8, 9, 11, 13, 15, 17, 18, 19, 20, 22, 23, 27, 28, 30, 31, 32, 34, 35, 36, 37, 39, 40, 42, 43, 45, 46, 47, 51, 53, 55, 56, 58, 59, 60, 61, 64, 65, 67, 68, 69, 71, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 83, 84, 87, 89, 90, 91, 92, 93, 94]
+fourier enhanced block used!
+modes=64, index=[2, 8, 13, 17, 24, 28, 29, 32, 34, 36, 73, 76, 88, 98, 106, 108, 110, 118, 121, 125, 141, 150, 155, 158, 161, 167, 178, 194, 198, 213, 219, 220, 221, 234, 237, 238, 240, 243, 246, 262, 265, 275, 285, 288, 291, 298, 306, 318, 324, 325, 336, 337, 346, 349, 356, 359, 360, 364, 370, 373, 377, 384, 402, 403]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[17, 18, 20, 21, 28, 32, 38, 61, 62, 63, 65, 70, 74, 92, 93, 102, 110, 113, 128, 130, 136, 137, 142, 152, 156, 159, 177, 178, 179, 193, 197, 201, 205, 208, 229, 232, 239, 246, 247, 251, 254, 263, 265, 268, 272, 274, 277, 278, 282, 292, 296, 298, 301, 302, 310, 312, 322, 341, 346, 366, 378, 380, 400, 401]
+modes_kv=64, index_kv=[2, 3, 5, 6, 7, 8, 10, 12, 13, 14, 16, 17, 18, 20, 22, 23, 25, 26, 27, 29, 30, 31, 32, 35, 36, 38, 40, 42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 56, 58, 59, 65, 67, 68, 70, 72, 73, 74, 75, 76, 77, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 92, 93]
+enc_modes: 64, dec_modes: 64
+>>>>>>>start training : weather_FEDformer_random_modes64_custom_ftM_sl192_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 35976
+val 4551
+test 9820
+Epoch: 1 cost time: 400.9550848007202
+Epoch: 1, Steps: 1124 | Train Loss: 0.6720606 Vali Loss: 0.7243445 Test Loss: 0.3973347
+Validation loss decreased (inf --> 0.724344).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 402.13130831718445
+Epoch: 2, Steps: 1124 | Train Loss: 0.6440716 Vali Loss: 0.7214116 Test Loss: 0.3912368
+Validation loss decreased (0.724344 --> 0.721412).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 401.6942021846771
+Epoch: 3, Steps: 1124 | Train Loss: 0.6360040 Vali Loss: 0.7130834 Test Loss: 0.3875763
+Validation loss decreased (0.721412 --> 0.713083).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 402.4234228134155
+Epoch: 4, Steps: 1124 | Train Loss: 0.6306286 Vali Loss: 0.7101853 Test Loss: 0.3908811
+Validation loss decreased (0.713083 --> 0.710185).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 402.94804334640503
+Epoch: 5, Steps: 1124 | Train Loss: 0.6277288 Vali Loss: 0.7116424 Test Loss: 0.3905694
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 401.9656627178192
+Epoch: 6, Steps: 1124 | Train Loss: 0.6264818 Vali Loss: 0.7147584 Test Loss: 0.3930902
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 402.7223389148712
+Epoch: 7, Steps: 1124 | Train Loss: 0.6257574 Vali Loss: 0.7154827 Test Loss: 0.3950812
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : weather_FEDformer_random_modes64_custom_ftM_sl192_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9820
+test shape: (306, 32, 720, 21) (306, 32, 720, 21)
+test shape: (9792, 720, 21) (9792, 720, 21)
+mse:0.3908809721469879, mae:0.40710484981536865

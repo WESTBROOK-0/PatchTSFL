@@ -1,0 +1,58 @@
+# ALL scripts in this file come from Autoformer
+if [ ! -d "./Transformerlogs" ]; then
+    mkdir ./Transformerlogs
+fi
+
+if [ ! -d "./Transformerlogs/LongForecasting" ]; then
+    mkdir ./Transformerlogs/LongForecasting
+fi
+
+random_seed=2021
+model_name=Transformer
+
+for pred_len in 96 192 336 720
+do
+  python -u run_longExp.py \
+    --random_seed $random_seed \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path exchange_rate.csv \
+    --model_id exchange_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 336 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 8 \
+    --dec_in 8 \
+    --c_out 8 \
+    --des 'Exp' \
+    --itr 1 \
+    --train_epochs 1 >Transformerlogs/LongForecasting/$model_name'_exchange_rate_'$pred_len.log
+
+  python -u run_longExp.py \
+    --random_seed $random_seed \
+    --is_training 1 \
+    --root_path ./dataset/ \
+    --data_path weather.csv \
+    --model_id weather_96_$pred_len \
+    --model $model_name \
+    --data custom \
+    --features M \
+    --seq_len 336 \
+    --label_len 48 \
+    --pred_len $pred_len \
+    --e_layers 2 \
+    --d_layers 1 \
+    --factor 3 \
+    --enc_in 21 \
+    --dec_in 21 \
+    --c_out 21 \
+    --des 'Exp' \
+    --itr 1 \
+    --train_epochs 2 >Transformerlogs/LongForecasting/$model_name'_weather_'$pred_len.log
+done

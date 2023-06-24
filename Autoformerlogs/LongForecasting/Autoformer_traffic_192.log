@@ -1,0 +1,22 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=128, c_out=862, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='traffic.csv', dec_in=862, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=862, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Autoformer', model_id='traffic_96_192', moving_avg=25, n_heads=8, num_workers=10, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=192, random_seed=2021, revin=1, root_path='./dataset/', seq_len=96, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=3, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : traffic_96_192_Autoformer_custom_ftM_sl96_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 11993
+val 1565
+test 3317
+Epoch: 1 cost time: 28.9952609539032
+Epoch: 1, Steps: 93 | Train Loss: 1.1454202 Vali Loss: 1.3456296 Test Loss: 1.5318891
+Validation loss decreased (inf --> 1.345630).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 28.868382453918457
+Epoch: 2, Steps: 93 | Train Loss: 0.5607882 Vali Loss: 0.6471906 Test Loss: 0.8234180
+Validation loss decreased (1.345630 --> 0.647191).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 3 cost time: 28.03667378425598
+Epoch: 3, Steps: 93 | Train Loss: 0.4096540 Vali Loss: 0.5538809 Test Loss: 0.7111756
+Validation loss decreased (0.647191 --> 0.553881).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : traffic_96_192_Autoformer_custom_ftM_sl96_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3317
+mse:0.7111798524856567, mae:0.44735458493232727, rse:0.6916054487228394

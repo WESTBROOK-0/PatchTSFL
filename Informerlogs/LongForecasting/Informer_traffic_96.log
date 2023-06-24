@@ -1,0 +1,22 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=128, c_out=862, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='traffic.csv', dec_in=862, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=862, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Informer', model_id='traffic_96_96', moving_avg=25, n_heads=8, num_workers=4, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=96, random_seed=2021, revin=1, root_path='./dataset/', seq_len=96, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=3, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : traffic_96_96_Informer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 12089
+val 1661
+test 3413
+Epoch: 1 cost time: 16.429046869277954
+Epoch: 1, Steps: 94 | Train Loss: 1.2640574 Vali Loss: 1.4899045 Test Loss: 1.6873260
+Validation loss decreased (inf --> 1.489905).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 15.615667819976807
+Epoch: 2, Steps: 94 | Train Loss: 0.9297302 Vali Loss: 1.0811677 Test Loss: 1.2558351
+Validation loss decreased (1.489905 --> 1.081168).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 3 cost time: 15.728399753570557
+Epoch: 3, Steps: 94 | Train Loss: 0.7109340 Vali Loss: 1.0234870 Test Loss: 1.1879644
+Validation loss decreased (1.081168 --> 1.023487).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : traffic_96_96_Informer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3413
+mse:1.1868709325790405, mae:0.6475886106491089, rse:0.8974695801734924

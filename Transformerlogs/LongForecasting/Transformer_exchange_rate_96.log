@@ -1,0 +1,38 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=4, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Transformer', model_id='exchange_96_96', moving_avg=25, n_heads=8, num_workers=10, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=96, random_seed=2021, revin=1, root_path='./dataset/', seq_len=336, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=1, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_96_96_Transformer_custom_ftM_sl336_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.3537910
+	speed: 0.0471s/iter; left time: 52.8160s
+	iters: 200, epoch: 1 | loss: 0.1708833
+	speed: 0.0264s/iter; left time: 26.9813s
+	iters: 300, epoch: 1 | loss: 0.1665875
+	speed: 0.0296s/iter; left time: 27.2523s
+	iters: 400, epoch: 1 | loss: 0.1644015
+	speed: 0.0256s/iter; left time: 21.0375s
+	iters: 500, epoch: 1 | loss: 0.3562725
+	speed: 0.0264s/iter; left time: 19.0362s
+	iters: 600, epoch: 1 | loss: 0.1225388
+	speed: 0.0270s/iter; left time: 16.7550s
+	iters: 700, epoch: 1 | loss: 0.3837341
+	speed: 0.0291s/iter; left time: 15.1793s
+	iters: 800, epoch: 1 | loss: 0.0856514
+	speed: 0.0284s/iter; left time: 11.9542s
+	iters: 900, epoch: 1 | loss: 0.1202502
+	speed: 0.0256s/iter; left time: 8.2292s
+	iters: 1000, epoch: 1 | loss: 0.1072346
+	speed: 0.0290s/iter; left time: 6.4026s
+	iters: 1100, epoch: 1 | loss: 0.1416958
+	speed: 0.0269s/iter; left time: 3.2502s
+	iters: 1200, epoch: 1 | loss: 0.1057544
+	speed: 0.0253s/iter; left time: 0.5303s
+Epoch: 1 cost time: 35.29022526741028
+Epoch: 1, Steps: 1220 | Train Loss: 0.2214443 Vali Loss: 0.9494290 Test Loss: 0.6695279
+Validation loss decreased (inf --> 0.949429).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : exchange_96_96_Transformer_custom_ftM_sl336_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+mse:0.6695281267166138, mae:0.6687148213386536, rse:0.622036337852478

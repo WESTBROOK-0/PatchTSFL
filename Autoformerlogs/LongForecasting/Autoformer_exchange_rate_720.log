@@ -1,0 +1,36 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=4, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Autoformer', model_id='exchange_96_720', moving_avg=25, n_heads=8, num_workers=10, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=720, random_seed=2021, revin=1, root_path='./dataset/', seq_len=96, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=1, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_96_720_Autoformer_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 1.1027627
+	speed: 0.0638s/iter; left time: 65.3878s
+	iters: 200, epoch: 1 | loss: 0.8953275
+	speed: 0.0447s/iter; left time: 41.3355s
+	iters: 300, epoch: 1 | loss: 0.7870587
+	speed: 0.0411s/iter; left time: 33.8849s
+	iters: 400, epoch: 1 | loss: 0.6585602
+	speed: 0.0431s/iter; left time: 31.2662s
+	iters: 500, epoch: 1 | loss: 1.3068587
+	speed: 0.0456s/iter; left time: 28.4957s
+	iters: 600, epoch: 1 | loss: 0.7089541
+	speed: 0.0448s/iter; left time: 23.5040s
+	iters: 700, epoch: 1 | loss: 0.7948196
+	speed: 0.0456s/iter; left time: 19.3769s
+	iters: 800, epoch: 1 | loss: 0.6766284
+	speed: 0.0477s/iter; left time: 15.4890s
+	iters: 900, epoch: 1 | loss: 1.2480185
+	speed: 0.0476s/iter; left time: 10.7092s
+	iters: 1000, epoch: 1 | loss: 0.6692399
+	speed: 0.0477s/iter; left time: 5.9575s
+	iters: 1100, epoch: 1 | loss: 0.7151974
+	speed: 0.0451s/iter; left time: 1.1287s
+Epoch: 1 cost time: 52.8572952747345
+Epoch: 1, Steps: 1124 | Train Loss: 0.9020247 Vali Loss: 1.0787627 Test Loss: 1.0882974
+Validation loss decreased (inf --> 1.078763).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : exchange_96_720_Autoformer_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+mse:1.088297724723816, mae:0.8115960955619812, rse:0.8207710981369019

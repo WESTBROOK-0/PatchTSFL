@@ -1,0 +1,100 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=128, c_out=7, checkpoints='./checkpoints/', d_ff=256, d_layers=1, d_model=128, data='custom', data_path='exchange_rate.csv', dec_in=7, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.2, e_layers=3, embed='timeF', embed_type=0, enc_in=8, factor=1, fc_dropout=0.2, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', mode_select='random', model='PatchTSFL', model_id='exchange_rate_336random_16', modes=16, moving_avg=25, n_heads=8, num_workers=0, output_attention=False, padding_patch='end', patch_len=16, patience=20, pct_start=0.3, pred_len=96, random_seed=2021, revin=1, root_path='./dataset/', seq_len=336, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=16, index=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 18, 19]
+>>>>>>>start training : exchange_rate_336random_16_PatchTSFL_custom_ftM_sl336_ll48_pl96_dm128_nh8_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 665
+test 1422
+Epoch: 1 cost time: 2.6428613662719727
+Epoch: 1, Steps: 38 | Train Loss: 0.4362104 Vali Loss: 0.3699904 Test Loss: 0.3280240
+Validation loss decreased (inf --> 0.369990).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 2.5784759521484375
+Epoch: 2, Steps: 38 | Train Loss: 0.3892595 Vali Loss: 0.2485385 Test Loss: 0.1944777
+Validation loss decreased (0.369990 --> 0.248539).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 3 cost time: 2.615065574645996
+Epoch: 3, Steps: 38 | Train Loss: 0.2276320 Vali Loss: 0.3629488 Test Loss: 0.2069452
+EarlyStopping counter: 1 out of 20
+Updating learning rate to 0.0001
+Epoch: 4 cost time: 2.600149393081665
+Epoch: 4, Steps: 38 | Train Loss: 0.1750291 Vali Loss: 0.4693683 Test Loss: 0.2444836
+EarlyStopping counter: 2 out of 20
+Updating learning rate to 9e-05
+Epoch: 5 cost time: 2.598781108856201
+Epoch: 5, Steps: 38 | Train Loss: 0.1544078 Vali Loss: 0.4293823 Test Loss: 0.2446327
+EarlyStopping counter: 3 out of 20
+Updating learning rate to 8.1e-05
+Epoch: 6 cost time: 2.651846170425415
+Epoch: 6, Steps: 38 | Train Loss: 0.1466419 Vali Loss: 0.4319253 Test Loss: 0.2549917
+EarlyStopping counter: 4 out of 20
+Updating learning rate to 7.290000000000001e-05
+Epoch: 7 cost time: 2.593135118484497
+Epoch: 7, Steps: 38 | Train Loss: 0.1417832 Vali Loss: 0.3993632 Test Loss: 0.2253671
+EarlyStopping counter: 5 out of 20
+Updating learning rate to 6.561e-05
+Epoch: 8 cost time: 2.595602512359619
+Epoch: 8, Steps: 38 | Train Loss: 0.1378540 Vali Loss: 0.3687317 Test Loss: 0.2107693
+EarlyStopping counter: 6 out of 20
+Updating learning rate to 5.904900000000001e-05
+Epoch: 9 cost time: 2.603830575942993
+Epoch: 9, Steps: 38 | Train Loss: 0.1352404 Vali Loss: 0.3790734 Test Loss: 0.2113615
+EarlyStopping counter: 7 out of 20
+Updating learning rate to 5.3144100000000005e-05
+Epoch: 10 cost time: 2.614152193069458
+Epoch: 10, Steps: 38 | Train Loss: 0.1328914 Vali Loss: 0.3863139 Test Loss: 0.2161004
+EarlyStopping counter: 8 out of 20
+Updating learning rate to 4.782969000000001e-05
+Epoch: 11 cost time: 2.610895872116089
+Epoch: 11, Steps: 38 | Train Loss: 0.1307378 Vali Loss: 0.3304902 Test Loss: 0.1824307
+EarlyStopping counter: 9 out of 20
+Updating learning rate to 4.304672100000001e-05
+Epoch: 12 cost time: 2.6156299114227295
+Epoch: 12, Steps: 38 | Train Loss: 0.1292366 Vali Loss: 0.3343100 Test Loss: 0.1827995
+EarlyStopping counter: 10 out of 20
+Updating learning rate to 3.874204890000001e-05
+Epoch: 13 cost time: 2.6051478385925293
+Epoch: 13, Steps: 38 | Train Loss: 0.1283430 Vali Loss: 0.3478433 Test Loss: 0.1891883
+EarlyStopping counter: 11 out of 20
+Updating learning rate to 3.486784401000001e-05
+Epoch: 14 cost time: 2.5987441539764404
+Epoch: 14, Steps: 38 | Train Loss: 0.1271309 Vali Loss: 0.3243626 Test Loss: 0.1770281
+EarlyStopping counter: 12 out of 20
+Updating learning rate to 3.138105960900001e-05
+Epoch: 15 cost time: 2.6736719608306885
+Epoch: 15, Steps: 38 | Train Loss: 0.1256540 Vali Loss: 0.3236351 Test Loss: 0.1718292
+EarlyStopping counter: 13 out of 20
+Updating learning rate to 2.824295364810001e-05
+Epoch: 16 cost time: 2.59328293800354
+Epoch: 16, Steps: 38 | Train Loss: 0.1250840 Vali Loss: 0.3143479 Test Loss: 0.1662874
+EarlyStopping counter: 14 out of 20
+Updating learning rate to 2.541865828329001e-05
+Epoch: 17 cost time: 2.605365514755249
+Epoch: 17, Steps: 38 | Train Loss: 0.1242277 Vali Loss: 0.2984609 Test Loss: 0.1595049
+EarlyStopping counter: 15 out of 20
+Updating learning rate to 2.287679245496101e-05
+Epoch: 18 cost time: 2.5941648483276367
+Epoch: 18, Steps: 38 | Train Loss: 0.1233671 Vali Loss: 0.2989064 Test Loss: 0.1552960
+EarlyStopping counter: 16 out of 20
+Updating learning rate to 2.0589113209464907e-05
+Epoch: 19 cost time: 2.598599433898926
+Epoch: 19, Steps: 38 | Train Loss: 0.1228761 Vali Loss: 0.2910948 Test Loss: 0.1534330
+EarlyStopping counter: 17 out of 20
+Updating learning rate to 1.8530201888518416e-05
+Epoch: 20 cost time: 2.604886054992676
+Epoch: 20, Steps: 38 | Train Loss: 0.1228757 Vali Loss: 0.2910754 Test Loss: 0.1505374
+EarlyStopping counter: 18 out of 20
+Updating learning rate to 1.6677181699666577e-05
+Epoch: 21 cost time: 2.6175596714019775
+Epoch: 21, Steps: 38 | Train Loss: 0.1219218 Vali Loss: 0.2791188 Test Loss: 0.1457078
+EarlyStopping counter: 19 out of 20
+Updating learning rate to 1.5009463529699919e-05
+Epoch: 22 cost time: 2.599853992462158
+Epoch: 22, Steps: 38 | Train Loss: 0.1218126 Vali Loss: 0.2622847 Test Loss: 0.1383585
+EarlyStopping counter: 20 out of 20
+Early stopping
+>>>>>>>testing : exchange_rate_336random_16_PatchTSFL_custom_ftM_sl336_ll48_pl96_dm128_nh8_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+mse:0.19447769224643707, mae:0.3264390528202057, rse:0.3358782231807709

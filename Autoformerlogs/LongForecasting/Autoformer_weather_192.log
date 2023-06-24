@@ -1,0 +1,26 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=128, c_out=21, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=21, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Autoformer', model_id='weather_96_192', moving_avg=25, n_heads=8, num_workers=10, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=192, random_seed=2021, revin=1, root_path='./dataset/', seq_len=96, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=2, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : weather_96_192_Autoformer_custom_ftM_sl96_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36600
+val 5079
+test 10348
+	iters: 100, epoch: 1 | loss: 1.0942265
+	speed: 0.2118s/iter; left time: 99.7526s
+	iters: 200, epoch: 1 | loss: 0.8162580
+	speed: 0.1944s/iter; left time: 72.1170s
+Epoch: 1 cost time: 57.28575277328491
+Epoch: 1, Steps: 285 | Train Loss: 0.8924802 Vali Loss: 0.6848958 Test Loss: 0.2776774
+Validation loss decreased (inf --> 0.684896).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.6226937
+	speed: 0.6144s/iter; left time: 114.2786s
+	iters: 200, epoch: 2 | loss: 0.5607601
+	speed: 0.1940s/iter; left time: 16.6812s
+Epoch: 2 cost time: 57.349146366119385
+Epoch: 2, Steps: 285 | Train Loss: 0.6707634 Vali Loss: 0.6378105 Test Loss: 0.2979321
+Validation loss decreased (0.684896 --> 0.637810).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : weather_96_192_Autoformer_custom_ftM_sl96_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10348
+mse:0.29793286323547363, mae:0.35289642214775085, rse:0.7180835604667664

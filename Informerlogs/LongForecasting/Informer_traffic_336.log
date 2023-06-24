@@ -1,0 +1,22 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=128, c_out=862, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='traffic.csv', dec_in=862, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=862, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Informer', model_id='traffic_96_336', moving_avg=25, n_heads=8, num_workers=4, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=336, random_seed=2021, revin=1, root_path='./dataset/', seq_len=96, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=3, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : traffic_96_336_Informer_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 11849
+val 1421
+test 3173
+Epoch: 1 cost time: 30.384217023849487
+Epoch: 1, Steps: 92 | Train Loss: 1.2609585 Vali Loss: 1.4808853 Test Loss: 1.7001281
+Validation loss decreased (inf --> 1.480885).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 30.26296901702881
+Epoch: 2, Steps: 92 | Train Loss: 1.0092572 Vali Loss: 1.2291417 Test Loss: 1.4473177
+Validation loss decreased (1.480885 --> 1.229142).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 3 cost time: 29.84762668609619
+Epoch: 3, Steps: 92 | Train Loss: 0.9160415 Vali Loss: 1.1930915 Test Loss: 1.4065990
+Validation loss decreased (1.229142 --> 1.193092).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : traffic_96_336_Informer_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3173
+mse:1.4075530767440796, mae:0.7767074704170227, rse:0.9711970686912537

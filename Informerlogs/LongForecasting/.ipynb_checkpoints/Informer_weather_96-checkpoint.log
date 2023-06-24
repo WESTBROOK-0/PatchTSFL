@@ -1,0 +1,26 @@
+Args in experiment:
+Namespace(activation='gelu', affine=0, batch_size=128, c_out=21, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, decomposition=0, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=21, factor=3, fc_dropout=0.05, features='M', freq='h', gpu=0, head_dropout=0.0, individual=0, is_training=1, itr=1, kernel_size=25, label_len=48, learning_rate=0.0001, loss='mse', lradj='type3', model='Informer', model_id='weather_96_96', moving_avg=25, n_heads=8, num_workers=4, output_attention=False, padding_patch='end', patch_len=16, patience=100, pct_start=0.3, pred_len=96, random_seed=2021, revin=1, root_path='./dataset/', seq_len=96, stride=8, subtract_last=0, target='OT', test_flop=False, train_epochs=2, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : weather_96_96_Informer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36696
+val 5175
+test 10444
+	iters: 100, epoch: 1 | loss: 0.6653929
+	speed: 0.0973s/iter; left time: 46.0093s
+	iters: 200, epoch: 1 | loss: 0.5328372
+	speed: 0.0902s/iter; left time: 33.6585s
+Epoch: 1 cost time: 26.642234325408936
+Epoch: 1, Steps: 286 | Train Loss: 0.7329728 Vali Loss: 0.5667490 Test Loss: 0.3284060
+Validation loss decreased (inf --> 0.566749).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.3736752
+	speed: 0.2367s/iter; left time: 44.2689s
+	iters: 200, epoch: 2 | loss: 0.3418800
+	speed: 0.0899s/iter; left time: 7.8239s
+Epoch: 2 cost time: 26.50148344039917
+Epoch: 2, Steps: 286 | Train Loss: 0.4213976 Vali Loss: 0.5041176 Test Loss: 0.5727260
+Validation loss decreased (0.566749 --> 0.504118).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : weather_96_96_Informer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10444
+mse:0.5728107690811157, mae:0.5409069657325745, rse:0.9970470070838928
