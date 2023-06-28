@@ -9,6 +9,32 @@
 
 # Results
 
+# Getting start  
+1.Install requirements. pip install -r requirements.txt
+
+2.Download data. You can download all the datasets from Autoformer. Create a seperate folder ./dataset and put all the csv files in the directory.
+
+3.Training. All the scripts are in the directory ./scripts/PatchTST. The default model is PatchTSFL. For example, if you want to get the multivariate forecasting results for weather dataset, just run the following command, and you can open ./result.txt to see the results once the training is done: sh ./scripts/PatchTSFL/weather.sh
+
+You can adjust the hyperparameters based on your needs (e.g. different patch length, different look-back windows and prediction lengths.). We also provide codes for the baseline models.
+
+# Acknowledgement  
+We appreciate the following github repo very much for the valuable code base and datasets:
+
+https://github.com/cure-lab/LTSF-Linear
+
+https://github.com/zhouhaoyi/Informer2020
+
+https://github.com/thuml/Autoformer
+
+https://github.com/MAZiqing/FEDformer
+
+https://github.com/alipay/Pyraformer
+
+https://github.com/yuqinie98/PatchTST
+
+
+
 
 
 
