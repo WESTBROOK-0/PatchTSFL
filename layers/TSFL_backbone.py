@@ -71,7 +71,7 @@ class TSFL_backbone(nn.Module):
 
     def forward(self, z, attn_mask=None):  # z: [bs x nvars x seq_len] / [bs x seq_len]->[bs x nvars x seq_len]
         # norm
-        #z = z[:,None,:]        #增加维度
+        #z = z[:,None,:]        
         if self.revin:
             z = z.permute(0, 2, 1)
             z = self.revin_layer(z, 'norm')
