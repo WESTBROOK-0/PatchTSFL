@@ -5,11 +5,38 @@
 **Fourier enhanced block**：Using the Fourier enhanced block instead of the multi-headed attention mechanism in the traditional transformer. Important information in the time series is captured by converting the time domain data into a frequency domain mapping, while also reducing the complexity of the model. 
 
 **MOEDecomp**：Using the Mixture Of Experts Decomposition block (MOEDecomp) to decompose the series enables the overall trend of the time series to be captured more fully.   
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/f7989dbd-a268-4bf1-89fe-ab8615ac0de9)  
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/ca0a2ad7-fbd5-4a0d-820c-b3344119b5a7)  
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/e75f91fe-92d6-4107-b2fc-9d7d7c70a995)  
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/b86aae16-a470-4f1e-a850-576571b6cca2)
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/4fc6f94a-9d45-40ac-b2a0-16589bc589a4)
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/0f5d9c46-5256-4077-9d75-6ed58fbd56b9)
 
 # Results
+## Multivariate time series forecasting  
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/69c06bc2-bac9-4f7c-be21-cd27ac1f1a67)  
+
+## Ablation Study
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/fd44a7cb-c6c0-4b4b-94bc-bb0968278986)  
+
+## Effect of different input and prediction lengths on the model
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/62120ec3-09fe-4584-8aba-e62a99bbcdef)
+
+## Visualization of model prediction results  
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/e92dce28-cd1b-4c31-a194-589e7cc936e3)
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/514b9054-8ee6-4ae3-9405-063a469fe2bf)  
+
+## Efficiency Analysis  
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/1b13bf96-7346-42f1-aeac-73fae9173941)
+
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/7a7754e7-65c6-49e8-b9dd-64b386f68b1c)
+
 
 # Getting start  
 1.Install requirements. pip install -r requirements.txt
