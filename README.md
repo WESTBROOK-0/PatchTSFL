@@ -14,15 +14,18 @@
 # Results
 ## Multivariate time series forecasting  
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/69c06bc2-bac9-4f7c-be21-cd27ac1f1a67)  
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/11f216f5-8412-4d7e-b5e4-09e2faddbc1d)
+
 
 ## Ablation Study
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/fd44a7cb-c6c0-4b4b-94bc-bb0968278986)  
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/796b5f00-dec1-49f1-9e82-c22e6efdfe51)
+
 
 ## Effect of different input and prediction lengths on the model
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/62120ec3-09fe-4584-8aba-e62a99bbcdef)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/b78043bf-9a24-42de-a7de-d09c399599c0)
+
 
 ## Visualization of model prediction results  
 
@@ -36,6 +39,8 @@
 
 
 ![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/7a7754e7-65c6-49e8-b9dd-64b386f68b1c)
+
+## Unvariate time series forecasting
 
 
 # Getting start  
