@@ -35,10 +35,12 @@
 
 ## Efficiency Analysis  
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/1b13bf96-7346-42f1-aeac-73fae9173941)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/3da37d83-b67b-4d24-9759-353be7e1bba4)
 
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/7a7754e7-65c6-49e8-b9dd-64b386f68b1c)
+
+![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/d68155a0-b5af-4e4c-a462-f28944ddb30f)
+
 
 ## Unvariate time series forecasting
 
