@@ -5,41 +5,41 @@
 **Fourier enhanced block**：Using the Fourier enhanced block instead of the multi-headed attention mechanism in the traditional transformer. Important information in the time series is captured by converting the time domain data into a frequency domain mapping, while also reducing the complexity of the model. 
 
 **MOEDecomp**：Using the Mixture Of Experts Decomposition block (MOEDecomp) to decompose the series enables the overall trend of the time series to be captured more fully.   
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/b86aae16-a470-4f1e-a850-576571b6cca2)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/1.png)
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/4fc6f94a-9d45-40ac-b2a0-16589bc589a4)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/2.png)
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/0f5d9c46-5256-4077-9d75-6ed58fbd56b9)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/3.png)
 
 # Results
 ## Multivariate time series forecasting  
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/11f216f5-8412-4d7e-b5e4-09e2faddbc1d)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/4.png)
 
 
 ## Ablation Study
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/796b5f00-dec1-49f1-9e82-c22e6efdfe51)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/5.png)
 
 
 ## Effect of different input and prediction lengths on the model
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/b78043bf-9a24-42de-a7de-d09c399599c0)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/6.png)
 
 
 ## Visualization of model prediction results  
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/e92dce28-cd1b-4c31-a194-589e7cc936e3)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/7.png)
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/514b9054-8ee6-4ae3-9405-063a469fe2bf)  
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/8.png)  
 
 ## Efficiency Analysis  
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/3da37d83-b67b-4d24-9759-353be7e1bba4)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/9.png)
 
 
 
-![image](https://github.com/WESTBROOK-0/PatchTSFL/assets/59240114/d68155a0-b5af-4e4c-a462-f28944ddb30f)
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/10.png)
 
 
 ## Unvariate time series forecasting
