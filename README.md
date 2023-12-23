@@ -44,6 +44,7 @@
 
 ## Unvariate time series forecasting
 
+![image](https://github.com/WESTBROOK-0/PatchTSFL/blob/master/figures/11.png)
 
 # Getting start  
 1.Install requirements. pip install -r requirements.txt
